@@ -62,14 +62,7 @@ function clickedTreatButton() {
 // Playing increases happiness but should decrease weight and energy.
 function clickedPlayButton() {
   pet_info.happiness += 8;
-
-  /*
-    TEMPORARY DEBUGGING BUG:
-    This should subtract 1 from weight.
-    Leave it incorrect until the breakpoint screenshots are complete.
-  */
-  pet_info.weight += 1;
-
+  pet_info.weight -= 1;
   pet_info.energy -= 5;
 
   updatePetMessage(petComments[1]);
